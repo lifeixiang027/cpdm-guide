@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        "cloud-image",
+        "highlight",
+        "sql-table",
+        "api",
+        "image-zoom",
+        "sequence",
+        "copy-code",
+        "flow"
+    ]
+}
