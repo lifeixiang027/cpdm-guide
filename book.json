@@ -7,6 +7,7 @@
         "image-zoom",
         "sequence",
         "copy-code",
-        "flow"
+        "flow",
+        "jsfiddle"
     ]
 }
