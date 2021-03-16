@@ -9,5 +9,21 @@
         "copy-code",
         "flow",
         "jsfiddle"
-    ]
+    ],
+    "pluginsConfig": {
+        "api": {
+            "default": {
+                "url": "http://cpdm.corilead.com/plm",
+                "contentType": "application/json",
+                "security": {
+                    "type": "oauth2"
+                },
+                "explore": false
+            }
+        },
+        "theme-default": {
+            "auto_open": true,
+            "logo": {}
+        }
+    }
 }
