@@ -1,9 +1,9 @@
 # 环境准备
 YAPI地址：http://yapi.corilead.com/
 # 接口定义
-1、在Controller类添加Tag注解
-2、Controller方法添加Operation注解
-3、所有非DTO的参数添加Parameter注解
+1、在Controller类添加@Tag注解，设置name和description属性
+2、在Controller方法添加@Operation注解，设置summary属性
+3、@PathVariable和@RequestParam类型的参数添加@Parameter注解
 ```java
 @RestController
 @Tag(name = "六性工作实例接口", description = "六性工作实例接口")
@@ -33,7 +33,7 @@ public class CharWorkInstanceController {
     return ResponseEntity.ok().build();
   }
 ```
-4、DTO类和字段都添加Schema注解
+4、DTO类和字段都添加@Schema注解
 ```java
 @Data
 @Schema(description = "工作项模板实例成员Dto")
@@ -51,7 +51,7 @@ public class CharWorkInstanceItemDto implements Serializable {
 # 接口导入
 ### 1、打开YAPI，找到所属项目
 ![](images/screenshot_1618228514698.png)
-### 2、进入项目详情页，选择设置页--token配置
+### 2、进入项目详情页，选择设置页 > token配置
 ![](images/screenshot_1618228609124.png)
 ### 3、在项目根目录新建文件yapi-import.json
 ```json
