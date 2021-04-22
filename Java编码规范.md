@@ -38,4 +38,5 @@
     - 必须及时删除类中不需要注入的类和不再使用的方法
 16. 其他
     - 不要将lombok用于生成getter和setter方法之外的其他地方，如不要使用lombok的@slf4j、@NonNull注解
-    - 使用slf4j输入日志和调试信息，禁止使用System.out方式输出
+    - 使用slf4j输出日志和异常信息，禁止使用`System.out`和`e.printStackTrace()`方式输出
+
