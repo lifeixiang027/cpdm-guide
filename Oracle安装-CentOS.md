@@ -9,7 +9,6 @@ sudo wget http://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol7 -O /etc/pki/rpm-gp
 sudo yum install -y oracle-rdbms-server-11gR2-preinstall
 ```
 ## 配置Oracle操作系统用户
-以下操作以root用户登录
 1. 以root用户登录操作系统
 2. 执行以下命令修改oracle用户密码，需要连续输入两次oracle的新密码
 ```
