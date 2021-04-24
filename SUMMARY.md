@@ -36,4 +36,4 @@
 * [备份和恢复](备份和恢复.md)
 * [常用工具](常用工具.md)
     * [Oracle导出和导入](Oracle导出和导入.md)
-    * [Oracle安装(CentOS)](Oracle安装-CentOS.md)
+    * [Oracle安装(CentOS + Oracle 11.2.0.4)](Oracle安装-CentOS.md)

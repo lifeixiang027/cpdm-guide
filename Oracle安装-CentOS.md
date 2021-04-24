@@ -52,12 +52,8 @@ CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib; export CLA
 ```
 ## 安装Oracle数据库软件
 1. 以oracle用户登录操作系统
-2. 下载Oracle安装文件，或者使用已有安装文件
-```
-wget https://updates.oracle.com/Orion/Services/download/p13390677_112040_Linux-x86-64_1of7.zip?aru=16716375&patch_file=p13390677_112040_Linux-x86-64_1of7.zip
-wget https://updates.oracle.com/Orion/Services/download/p13390677_112040_Linux-x86-64_2of7.zip?aru=16716375&patch_file=p13390677_112040_Linux-x86-64_2of7.zip
-```
-3. 并执行命令解压Oracle安装文件
+2. 将Oracle 11.2.0.4安装文件拷贝到服务器
+3. 执行命令解压Oracle安装文件
 ```
 unzip p13390677_112040_Linux-x86-64_1of7.zip
 unzip p13390677_112040_Linux-x86-64_2of7.zip
