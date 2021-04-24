@@ -35,3 +35,5 @@
     * [YAPI开发使用规范](YAPI开发规范.md)
 * [备份和恢复](备份和恢复.md)
 * [常用工具](常用工具.md)
+    * [Oracle导出和导入](Oracle导出和导入.md)
+    * [Oracle安装(CentOS)](Oracle安装-CentOS.md)
