@@ -4,11 +4,11 @@ cd /etc/yum.repos.d
 sudo wget http://yum.oracle.com/public-yum-ol7.repo
 sudo wget http://public-yum.oracle.com/RPM-GPG-KEY-oracle-ol7 -O /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
 ```
-## 执行Oracle预安装
+## 执行Oracle预安装程序
 ```sh
 sudo yum install -y oracle-rdbms-server-11gR2-preinstall
 ```
-## 后续步骤
+## 配置Oracle操作系统用户
 以下操作以root用户登录
 1. 以root用户登录操作系统
 2. 执行以下命令修改oracle用户密码，需要连续输入两次oracle的新密码
@@ -50,7 +50,7 @@ PATH=$ORACLE_HOME/bin:$PATH; export PATH
 LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib; export LD_LIBRARY_PATH
 CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib; export CLASSPATH
 ```
-## 安装Oracle
+## 安装Oracle数据库软件
 1. 以oracle用户登录操作系统
 2. 下载Oracle安装文件，或者使用已有安装文件
 ```
@@ -67,3 +67,6 @@ unzip p13390677_112040_Linux-x86-64_2of7.zip
 ```
 ./runInstaller
 ```
+
+## 创建Oracle数据库实例
+
