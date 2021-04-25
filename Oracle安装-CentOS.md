@@ -33,21 +33,27 @@ mkdir -p /u01/app/oracle/product/11.2.0.4/db_1
 chown -R oracle:oinstall /u01
 chmod -R 775 /u01
 ```
-6. 修改文件/home/oracle/.bash_profile，添加以下内容
+6. 执行以下命令新建Oracle环境变量配置文件
 ```
-TMP=/tmp; export TMP
-TMPDIR=$TMP; export TMPDIR
+cat > /home/oracle/scripts/setEnv.sh <<EOF
+export TMP=/tmp
+export TMPDIR=\$TMP
 
-ORACLE_UNQNAME=WIND; export ORACLE_UNQNAME
-ORACLE_BASE=/u01/app/oracle; export ORACLE_BASE
-ORACLE_HOME=$ORACLE_BASE/product/11.2.0.4/db_1; export ORACLE_HOME
-ORACLE_SID=WIND; export ORACLE_SID
-ORACLE_TERM=xterm; export ORACLE_TERM
-PATH=/usr/sbin:$PATH; export PATH
-PATH=$ORACLE_HOME/bin:$PATH; export PATH
+export ORACLE_UNQNAME=WIND
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=\$ORACLE_BASE/product/11.2.0.4/db_1
+export ORACLE_SID=cdb1
 
-LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib; export LD_LIBRARY_PATH
-CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib; export CLASSPATH
+export PATH=/usr/sbin:/usr/local/bin:\$PATH
+export PATH=\$ORACLE_HOME/bin:\$PATH
+
+export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
+EOF
+```
+7. 执行以下命令修改文件/home/oracle/.bash_profile
+```
+echo ". /home/oracle/scripts/setEnv.sh" >> /home/oracle/.bash_profile
 ```
 ## 安装Oracle数据库软件
 1. 以oracle用户登录操作系统
@@ -62,6 +68,31 @@ unzip p13390677_112040_Linux-x86-64_2of7.zip
 ```
 ./runInstaller
 ```
+## 配置Oracle监听程序
 
 ## 创建Oracle数据库实例
 
+## 配置Oracle自动启动
+1.  执行命令创建目录
+```
+mkdir /home/oracle/scripts
+```
+2. 执行命令
+```
+cat > /home/oracle/scripts/setEnv.sh <<EOF
+export TMP=/tmp
+export TMPDIR=\$TMP
+
+export ORACLE_UNQNAME=WIND
+export ORACLE_BASE=/u01/app/oracle
+export ORACLE_HOME=\$ORACLE_BASE/product/11.2.0.4/db_1
+export ORACLE_SID=WIND
+
+export PATH=/usr/sbin:/usr/local/bin:\$PATH
+export PATH=\$ORACLE_HOME/bin:\$PATH
+
+export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
+export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
+EOF
+~~~
+```
