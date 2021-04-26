@@ -73,6 +73,8 @@ unzip p13390677_112040_Linux-x86-64_2of7.zip
 ## 创建Oracle数据库实例
 
 ## 配置Oracle自动启动
+修改`/etc/oratab`文件
+``
 1.  执行命令创建目录
 ```
 mkdir /home/oracle/scripts
@@ -94,5 +96,4 @@ export PATH=\$ORACLE_HOME/bin:\$PATH
 export LD_LIBRARY_PATH=\$ORACLE_HOME/lib:/lib:/usr/lib
 export CLASSPATH=\$ORACLE_HOME/jlib:\$ORACLE_HOME/rdbms/jlib
 EOF
-~~~
 ```
