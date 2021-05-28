@@ -37,3 +37,4 @@
 * [常用工具](常用工具.md)
     * [Oracle导出和导入](Oracle导出和导入.md)
     * [Oracle安装(CentOS + Oracle 11.2.0.4)](Oracle安装-CentOS.md)
+    * [Open VM Tools](OpenVMTools.md)
