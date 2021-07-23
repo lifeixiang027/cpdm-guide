@@ -88,12 +88,12 @@ spring.security.oauth2.client.provider.uaa.authorization-uri=http://192.168.0.77
 ## 更新镜像命令
 需要更新镜像时，使用以下命令删除docker容器和镜像，重新启动服务。
 ```
-#  停止docker容器
+#停止docker容器
 docker stop `docker ps -a | grep cplm | awk '{print $1}'`
 
-# 删除docker容器
+#删除docker容器
 docker rm `docker ps -a | grep cplm | awk '{print $1}'`
 
-# 删除docker镜像
+#删除docker镜像
 docker rmi `docker images | grep cplm | awk '{print $3}'`
 ```
