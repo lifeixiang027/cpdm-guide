@@ -47,3 +47,5 @@
         * [Oracle导出和导入](Oracle导出和导入.md)
         * [Oracle安装(CentOS + Oracle 11.2.0.4)](Oracle安装-CentOS.md)
     * [Nginx相关](Nginx相关.md)
+    * [MySQL相关](MySQL相关.md)
+        * [表名转换为大写](表名转换为大写.md)
