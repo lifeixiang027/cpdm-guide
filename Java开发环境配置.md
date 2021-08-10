@@ -102,15 +102,21 @@ mvn -version
 ```
 
 ### IntelliJ IDEA
-* 下载IntelliJ IDEA并安装
-* 安装插件
+#### 下载IntelliJ IDEA并安装
+####  安装插件
     - google-java-format
     - Alibaba Java Coding Guidelines
     - Maven Helper
     - GitToolBox
     - Git Commit Template
     - Lombok(*新版本IDEA已经内置，不需要手动安装*)
-* 启用google-java-forma插件
+#### 配置google-java-forma插件
+1. 启用google-java-format插件
 ![](images/screenshot_1617261493455.png)
+2. 下载[IntelliJ Java Google Style](https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml)文件
+3. `File→Settings→Editor→Code Style`，点击`Scheme`右侧的工具图标，选择`Import Scheme > IntelliJ IDEA code style XML`
+![](images/screenshot_1628560625552.png)
+4. 选择IntelliJ Java Google Style文件
+![](images/screenshot_1628560525488.png)
 
 ### 
