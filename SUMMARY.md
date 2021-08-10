@@ -41,6 +41,7 @@
     * [Java开发规范](Java开发规范.md)
     * [React开发规范](React开发规范.md)
     * [YAPI开发规范](YAPI开发规范.md)
+    * [Liquibase开发规范](Liquibase开发规范.md)
 * [常用技术](常用技术.md)
     * [Linux相关](Linux相关.md)
     * [Oracle相关](Oracle相关.md)
