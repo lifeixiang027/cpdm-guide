@@ -15,7 +15,9 @@ public class DepartmentController {
 @PageableAsQueryParam
 @GetMapping(value = "/departments/{departmentId}/members")
 public ResponseEntity<DepartmentMemberDto> listDepartmentMembers(
-      @Parameter(description = "部门ID") @PathVariable String departmentId, @Parameter(description = "成员类型") @RequestParam String memberType, @Parameter(hidden = true) Pageable pageable) {
+    @Parameter(description = "部门ID") @PathVariable String departmentId, 
+    @Parameter(description = "成员类型") @RequestParam String memberType, 
+    @Parameter(hidden = true) Pageable pageable) {
     ...
   }
 ```
