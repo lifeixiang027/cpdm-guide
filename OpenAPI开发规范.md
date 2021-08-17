@@ -21,7 +21,7 @@ public ResponseEntity<DepartmentMemberDto> listDepartmentMembers(
     ...
   }
 ```
-4. DTO类添加`@ParameterObject`和`@Schema`注解并设置属性`description`，字段添加`@Parameter`和`@Schema`注解并设置属性`description`
+5. DTO类添加`@ParameterObject`和`@Schema`注解并设置属性`description`，字段添加`@Parameter`和`@Schema`注解并设置属性`description`
 ```java
 @Data
 @ParameterObject(description = "部门成员DTO")
