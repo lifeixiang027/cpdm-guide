@@ -1,5 +1,5 @@
-# OpenAPI注解定义
-1. Controller类添加`@Tag`注解，设置`name`和`description`属性
+## OpenAPI注解定义
+1. Controller类添加注解`@Tag`，并设置属性`name`和`description`
 ```
 @RestController
 @Tag(name = "部门", description = "部门接口")
@@ -7,9 +7,9 @@ public class DepartmentController {
   ...
 }
 ```
-2. Controller方法添加`@Operation`注解并设置`summary`属性
-3.  Controller方法参数包含`Pageable`类型时，方法上添加注解`@PageableAsQueryParam`，参数上添加注解`@Parameter(hidden = true) `
-4. Controller方法中`@PathVariable`和`@RequestParam`类型的参数添加`@Parameter`注解
+2. Controller方法添加注解`@Operation`并设置属性`summary`
+3.  Controller方法包含`Pageable`类参数时，方法上添加注解`@PageableAsQueryParam`，参数上添加注解`@Parameter(hidden = true) `
+4. Controller方法包含`@PathVariable`和`@RequestParam`类型参数时，参数上添加注解`@Parameter`并设置属性`description`
 ```java
 @Operation(summary = "部门成员列表")
 @PageableAsQueryParam
