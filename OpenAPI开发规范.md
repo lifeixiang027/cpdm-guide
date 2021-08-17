@@ -9,18 +9,18 @@ public class DepartmentController {
 ```
 2. Controller方法添加注解`@Operation`并设置属性`summary`
 ```java
-@Operation(summary = "流程任务列表")
-@GetMapping(value = "/tasks")
-public ResponseEntity<TaskDto> listTasks(...) {
+@Operation(summary = "部门列表")
+@GetMapping(value = "/departments")
+public ResponseEntity<DepartmentDto> listDepartments(...) {
   ...
 }
 ```
 3.  Controller方法包含`Pageable`类参数时，方法上添加注解`@PageableAsQueryParam`，参数上添加注解`@Parameter(hidden = true) `
 ```java
-@Operation(summary = "流程任务列表")
+@Operation(summary = "部门列表")
 @PageableAsQueryParam
-@GetMapping(value = "/tasks")
-public ResponseEntity<TaskDto> listTasks(@Parameter(hidden = true) Pageable pageable) {
+@GetMapping(value = "/departments")
+public ResponseEntity<DepartmentDto> listDepartments(@Parameter(hidden = true) Pageable pageable) {
   ...
 }
 ```
@@ -37,8 +37,11 @@ public ResponseEntity<DepartmentMemberDto> listDepartmentMembers(
 5. Controller方法包含DTO数据类型的`@RequestParam`类型参数时，参数上添加注解`@ParameterObject`
 ```java
 @Operation(summary = "部门列表")
+@PageableAsQueryParam
 @GetMapping(value = "/departments")
-public ResponseEntity<DepartmentDto> listDepartments(@ParameterObject DepartmentQueryDto query) {
+public ResponseEntity<DepartmentDto> listDepartments(
+  @ParameterObject DepartmentQueryDto query,
+  @Parameter(hidden = true) Pageable pageable) {
   ...
 }
 ```
