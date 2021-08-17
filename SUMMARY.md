@@ -40,7 +40,7 @@
     * [Git流程规范](Git流程规范.md)
     * [Java开发规范](Java开发规范.md)
     * [React开发规范](React开发规范.md)
-    * [YAPI开发规范](YAPI开发规范.md)
+    * [OpenAPI开发规范](OpenAPI开发规范.md)
     * [Liquibase开发规范](Liquibase开发规范.md)
     * [缓存使用规范](缓存使用规范.md)
 * [常用技术](常用技术.md)
